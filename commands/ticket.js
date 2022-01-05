@@ -7,7 +7,7 @@ module.exports = {
     description: "open a ticket",
     async execute(Discord, client, message, args, cmd){
         const channel = await message.guild.channels.create(`ticket: ${message.author.tag}`);
-        channel.setParent('928047403431522304');
+        channel.setParent('928227840892219392');
 
         channel.permissionOverwrites.edit(message.guild.id, {
            SEND_MESSAGES: false,
