@@ -19,8 +19,8 @@ client.events = new Discord.Collection();
 
 client.on("messageCreate", message =>{
     const text = message.content.toLowerCase();
-    if (text.includes("discord.gg/")) message.delete(), console.log("Deleted discord invite.")
-    if (text.includes("free nitro")) message.delete(), console.log("Deleted nitro scam.")
+    if (text.includes("discord.gg/")) message.delete(), console.log(`Deleted discord invite. ${message.author.username} ${message.channel.name}`)
+    if (text.includes("free nitro")) message.delete(), console.log(`Deleted nitro scam. ${message.author.username} ${message.channel.name}`)
 })
 
 // client.once("ready", () => {
