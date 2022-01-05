@@ -10,7 +10,7 @@ module.exports = {
         .setDescription(`Prefix is set to **${process.env.PREFIX}**`)
         .addFields(
             {name: 'adress.add', value: 'Add your address to the WL list.'},
-            {name: '**Plase doubele check that you entered the correct adress!**', value: '⠀', inline: true },
+            {name: '**Plase double check that you entered the correct adress!**', value: '⠀', inline: true },
             {name: 'ticket', value: 'Create a ticket, where you can ask for help!'},
             {name: 'ping', value: 'Test that the bot is online!'},
         )
