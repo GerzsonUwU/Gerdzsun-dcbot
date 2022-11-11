@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <title>Topcrypto-embed</title>
+  <style>
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+    }
+    .app{
+      max-width: 500px;
+    }
+    .div{
+      background-color: #24252a;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+    }
+    p{
+      color: #edf0f1;
+      font-weight: bold;
+    }
+    .i{
+      color: #edf0f1;
+    }
+    .d{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      width: 75px;
+      height: 40px;
+    }
+    .up{
+      background-color: #16c784;
+    }
+    .down{
+      background-color: #ea3943;
+    }
+    img{
+      height: 34px;
+      width: 34px;
+    }
+    .crypto{
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    .rank{
+      background-color: gray;
+      border-radius: 10px;
+      width: 25px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="div">
+      <div class="crypto">
+        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png">
+        <p>Bitcoin</p>
+        <p>20000 USD</p>
+        <div class="d up"><p>1.94%</p><span class="material-symbols-rounded i">arrow_drop_up</span></div>
+        <div class="rank"><p>#1</p></div>
+      </div>
+      <div class="crypto">
+        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png">
+        <p>Etherium</p>
+        <p>1100 USD</p>
+        <div class="d up"><p>3.83%</p><span class="material-symbols-rounded i">arrow_drop_up</span></div>
+        <div class="rank"><p>#2</p></div>
+      </div>
+      <div class="crypto">
+        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png">
+        <p>BNB</p>
+        <p>237 USD</p>
+        <div class="d down"><p>0.11%</p><span class="material-symbols-rounded i">arrow_drop_down</span></div>
+        <div class="rank"><p>#4</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

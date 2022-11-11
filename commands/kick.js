@@ -12,7 +12,7 @@ module.exports = {
             .setColor('#3498db')
             .setTitle('Kick')
             .setDescription('A kijelölt felhasználó kickelve lett.')
-            message.channel.send(kick);
+            message.channel.send({ embeds: [kick] })
         }else{
             message.channel.send('Kit is akarsz kickelni?');
         }

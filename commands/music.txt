@@ -1,0 +1,38 @@
+const { CommandInteractions, MessageEmbed, Interaction } = require('discord.js');
+
+module.exports = {
+    name: 'play',
+    aliases: ['skip', 'stop', 'pause', 'resume', 'volume'], 
+    permissions: [],   
+    description: 'Advanced music bot',
+    async execute(Discord, client, message, args, cmd){
+        const VoiceChannel = member.voice.channel;
+
+        if(!VoiceChannel) return member.reply("Egy voice channelben kell lenned ahoz hogy zenét játszhass.")
+        setTimeout(() => msg.delete(), 7000);
+
+        try {
+            if (cmd === "play") {
+                client.distube.playVoiceChannel(VoiceChannel, options.getString("query"), {textChannel, member: member});
+                return member.reply("🎵")
+            }
+
+            if (cmd === "volume") {
+                const Volume = options.getNumber("precent");
+                if(Volume > 100 || Volume < 1) return message.reply("Hangerőnek 1 és 100 között kell lennie.")
+
+                client.distube.setVolume(VoiceChannel, Volume);
+                return message.reply(`🔊 Hangerő: \`${Volume}%\``)
+            }
+
+             
+
+        }catch (e){
+            const errorEmbed = new MessageEmbed()
+            .setColor("RED")
+            .setDescription(`⛔ Alert: ${e}`)
+            return message.channel.send({ embeds: [errorEmbed] })
+        }
+    }
+
+}

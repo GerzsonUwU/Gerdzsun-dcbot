@@ -6,8 +6,8 @@ module.exports = {
     execute(Discord, client, message, args, cmd){
         const target = message.mentions.users.first();
         if(target){
-            let mainRole = message.guild.roles.cache.find(role => role.name === 'member');
-            let mutedRole = message.guild.roles.cache.find(role => role.name === 'muted');
+            let mainRole = message.guild.roles.cache.find(role => role.name === 'NAGY KUKI');
+            let mutedRole = message.guild.roles.cache.find(role => role.name === 'Muted');
 
             let memberTarget = message.guild.members.cache.get(target.id);
 
@@ -17,7 +17,7 @@ module.exports = {
             .setColor('#3498db')
             .setTitle('Unmute')
             .setDescription(`A <@${memberTarget.user.id}> unmutolva lett.`)
-            message.channel.send(unmute);
+            message.channel.send({ embeds: [unmute] }) 
         } else{
             message.channel.send('Kit is akarsz unmutoli?')
         }

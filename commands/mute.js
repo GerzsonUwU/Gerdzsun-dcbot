@@ -7,8 +7,8 @@ module.exports = {
     execute(Discord, client, message, args, cmd){ //Discord, client, message
         const target = message.mentions.users.first();
         if(target){
-            let mainRole = message.guild.roles.cache.find(role => role.name === 'member');
-            let mutedRole = message.guild.roles.cache.find(role => role.name === 'muted');
+            let mainRole = message.guild.roles.cache.find(role => role.name === 'NAGY KUKI');
+            let mutedRole = message.guild.roles.cache.find(role => role.name === 'Muted');
 
             let memberTarget = message.guild.members.cache.get(target.id);
 
@@ -20,7 +20,7 @@ module.exports = {
                 .setColor('#3498db')
                 .setTitle('Mute')
                 .setDescription(`A <@${memberTarget.user.id}> mutolva lett.`)
-                message.channel.send(mute);
+                message.channel.send({ embeds: [mute] })
                 return
     
             }
@@ -30,7 +30,7 @@ module.exports = {
             .setColor('#3498db')
             .setTitle('Mute')
             .setDescription(`A <@${memberTarget.user.id}> mutolva lett ${ms(ms(args[1]))}.`)
-            message.channel.send(mute);
+            message.channel.send({ embeds: [mute] })
 
             setTimeout(function () {
                 memberTarget.roles.remove(mutedRole.id);
@@ -39,7 +39,7 @@ module.exports = {
                 .setColor('#3498db')
                 .setTitle('Mute')
                 .setDescription(`A <@${memberTarget.user.id}> unmutolva lett.`)
-                message.channel.send(unmute);                
+                message.channel.send({ embeds: [unmute] })               
             }, ms(args[1]));
         } else{
             message.channel.send('Kit is akarsz mutulni?')

@@ -10,7 +10,9 @@ module.exports = {
             if(args[0] > 200) return message.reply("nem törölhetsz 200-nál több üzenetet");
             if(args[0] < 1) return message.reply("most akarsz üzenetet törölni vagy sem?");
 
-            await message.channel.messages.fetch({limit: args[0]}).then(messages =>{
+            const arg = parseInt(args[0])
+            const num = arg + 1
+            await message.channel.messages.fetch({limit: num}).then(messages =>{
             message.channel.bulkDelete(messages)
             
         });

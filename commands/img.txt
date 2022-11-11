@@ -1,0 +1,30 @@
+const fetch = require("node-fetch")
+
+
+module.exports = {
+    name: 'img',
+    aliases: ['nude'], 
+    permissions: [],   
+    description: 'Just sends the sweet images',
+    async execute(Discord, client, message, args, cmd){
+        let data = await fetch
+        (``).then(res => res.json())
+
+        if(data.ups < 1000){
+            console.log('lower than 1000 updoot')
+        }
+
+        const embed = new Discord.MessageEmbed()
+        embed.setTitle(data.title)
+        embed.setURL(data.postLink)
+        embed.setColor("#fc03be")
+        embed.setFooter(data.ups + "Upvotes")
+        embed.setTimestamp()
+        embed.setImage(data.url)
+
+        message.channel.send(embed)
+
+    }
+
+
+}

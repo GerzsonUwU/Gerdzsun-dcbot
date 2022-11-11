@@ -1,4 +1,3 @@
-const { permissions } = require("../../commands/kick");
 require('dotenv').config();
 
 module.exports = (Discord, client, message) => { //Discord, client, message, args
@@ -65,7 +64,7 @@ module.exports = (Discord, client, message) => { //Discord, client, message, arg
       try{
         command.execute(Discord, client, message, args, cmd)
       }catch (err) {
-        message.reply("Probléma volt a command végrehajtásával!")
+        message.reply("Probléma volt a command végrehajtásával!" + ``(err)``)
         console.log(err);
       }
 }

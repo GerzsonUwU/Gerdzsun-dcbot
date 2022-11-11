@@ -6,12 +6,12 @@ module.exports = {
     execute(Discord, client, message, args, cmd){
         const Help = new Discord.MessageEmbed()
         .setColor('#FBA918')
-        .setAuthor({ name: 'Spark bot - Command List', iconURL: 'https://pbs.twimg.com/profile_images/1478092319303905286/-wCDCGL4_400x400.jpg', url: 'https://aron-molnar-megyeri.gitbook.io/spark-dao-docs/' })
+        .setAuthor({ name: 'Spark bot - Command List', iconURL: 'https://i.imgur.com/S2Hhyiu.png', url: 'https://www.youtube.com/watch?v=FDxkNmK0djg' })
         .setDescription(`Prefix is set to **${process.env.PREFIX}**`)
         .addFields(
-            {name: 'adress.add', value: 'Add your address to the WL list.'},
-            {name: '**Plase double check that you entered the correct adress!**', value: '⠀', inline: true },
-            {name: 'ticket', value: 'Create a ticket, where you can ask for help!'},
+            {name: 'play', value: 'Játszhatsz very uwu waw zenéket'},
+            {name: 'ban', value: 'Kibannolhatod tunyhalat', inline: true },
+            {name: 'kick', value: 'Kickelehetd tunyhalats'},
             {name: 'ping', value: 'Test that the bot is online!'},
         )
         

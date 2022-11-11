@@ -13,7 +13,7 @@ module.exports = {
             .setTitle('Bann')
             .setDescription('A kijelölt felhasználó bannolva lett.')
             .setImage('https://media2.giphy.com/media/H99r2HtnYs492/giphy.gif')
-            message.channel.send(ban);
+            message.channel.send({ embeds: [ban] })
         }else{
             message.channel.send('Kit is akarsz bannolni?');
         }
